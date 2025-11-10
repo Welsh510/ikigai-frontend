@@ -1,0 +1,20 @@
+[phases.setup]
+nixPkgs = ["nodejs-18_x", "ffmpeg"]
+
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = [
+  "npm run build",
+  "ls -la",
+  "ls -la build/ || echo 'Build directory not found'"
+]
+
+[start]
+cmd = "npm start"
+
+[variables]
+PORT = "8080"
+REACT_APP_API_URL = "https://reactjs-appointmentwhatsapp-production.up.railway.app"
+NODE_ENV = "production"
