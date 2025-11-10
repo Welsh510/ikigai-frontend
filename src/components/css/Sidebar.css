@@ -1,0 +1,197 @@
+/* Sidebar.css */
+.sidebar {
+  background-color: #1f2937;
+  color: white;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 50;
+  width: 256px;
+}
+
+/* Desktop behavior - sidebar is always visible and takes space */
+@media (min-width: 768px) {
+  .sidebar {
+    position: relative;
+    transform: none !important;
+  }
+  
+  .sidebar.open {
+    width: 256px;
+  }
+
+  .sidebar.closed {
+    width: 0;
+  }
+}
+
+/* Mobile behavior - sidebar overlays content */
+@media (max-width: 767px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-100%);
+  }
+}
+
+.sidebar-header {
+  padding: 16px;
+}
+
+.sidebar-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #60a5fa;
+  margin: 0;
+}
+
+.sidebar-nav {
+  margin-top: 32px;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-nav-item:hover {
+  background-color: #374151;
+}
+
+.sidebar-nav-item.logout:hover {
+  background-color: #dc2626;
+}
+
+.sidebar-nav-item-icon {
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.sidebar-quick-actions {
+  margin-top: 32px;
+  padding: 0 16px;
+}
+
+.sidebar-quick-actions-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.sidebar-quick-action {
+  display: block;
+  padding: 4px 8px;
+  font-size: 14px;
+  color: #d1d5db;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-quick-action:hover {
+  background-color: #374151;
+}
+
+/* Add these styles to your existing Sidebar.css file */
+
+/* Container for nav items with submenus */
+.sidebar-nav-item-container {
+  position: relative;
+}
+
+/* Style for nav items with submenus */
+.sidebar-nav-item-container .sidebar-nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Arrow indicator for submenu */
+.submenu-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+}
+
+.submenu-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Active state for parent menu with open submenu */
+.sidebar-nav-item.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Submenu container */
+.sidebar-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-submenu.open {
+  max-height: 350px; /* Adjust as needed */
+}
+
+/* Submenu items */
+.sidebar-submenu-item {
+  display: block;
+  width: 100%;
+  padding: 12px 16px 12px 32px; /* Extra left padding for indentation */
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.sidebar-submenu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-submenu-item:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar-submenu.open {
+    max-height: 150px;
+  }
+  
+  .sidebar-submenu-item {
+    padding: 10px 14px 10px 28px;
+    font-size: 13px;
+  }
+}

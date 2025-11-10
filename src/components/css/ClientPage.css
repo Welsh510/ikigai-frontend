@@ -1,0 +1,551 @@
+/* UserPage Styles */
+.homepage-container {
+  padding: 20px;
+}
+
+.homepage-header {
+  margin-bottom: 30px;
+}
+
+.homepage-title {
+  color: #333;
+  font-size: 28px;
+  margin: 0;
+}
+
+/* Filter Section */
+.filter-section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+
+.filter-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+  font-size: 14px;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.reset-button {
+  background-color: white;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.new-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.new-button:hover {
+  background-color: #0056b3;
+}
+
+/* Table Styles */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table-header {
+  background-color: #007bff;
+  color: white;
+}
+
+.table-header th {
+  padding: 12px;
+  text-align: left;
+  border-right: 1px solid #0056b3;
+  font-weight: 600;
+}
+
+.table-header th:last-child {
+  border-right: none;
+}
+
+.table-row {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.table-row:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.table-row:nth-child(odd) {
+  background-color: white;
+}
+
+.table-row:hover {
+  background-color: #e9ecef !important;
+}
+
+.table-cell {
+  padding: 12px;
+  border-right: 1px solid #dee2e6;
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
+.status-active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.status-inactive {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Loading and Error States */
+.loading-message {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.error-message {
+  padding: 20px;
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.no-data-message {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Pagination Styles */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 15px 0;
+}
+
+.pagination-info {
+  color: #666;
+  font-size: 14px;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.pagination-button {
+  padding: 8px 12px;
+  border: 1px solid #dee2e6;
+  background-color: white;
+  color: #007bff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination-button:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+  border-color: #dee2e6;
+}
+
+.pagination-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination-ellipsis {
+  padding: 8px 4px;
+  color: #6c757d;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal-error {
+  color: #dc3545;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+.modal-success {
+  color: #155724;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.form-input:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.cancel-button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.cancel-button:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #999;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.cancel-button:disabled,
+.submit-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .filter-controls {
+    justify-content: center;
+  }
+  
+  .filter-input {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .users-table {
+    font-size: 14px;
+  }
+  
+  .table-cell {
+    padding: 8px;
+  }
+  
+  .pagination-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .modal-content {
+    width: 95vw;
+    padding: 20px;
+  }
+}
+
+/* Date picker custom styles */
+.react-datepicker-wrapper {
+  display: block;
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  display: block;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+}
+
+/* Override date picker theme to match your design */
+.react-datepicker {
+  font-family: inherit;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+  background-color: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.react-datepicker__day:hover {
+  background-color: #dbeafe;
+}
+
+.react-datepicker__day--today {
+  font-weight: bold;
+  color: #3b82f6;
+}
+.delete-button {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  margin: 0 2px;
+}
+
+.delete-button:hover {
+  background: #ff3838;
+  transform: scale(1.05);
+}
+
+.delete-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.delete-button:active {
+  transform: scale(0.95);
+}
+
+/* Delete Confirmation Modal Styles */
+.delete-confirmation {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.delete-confirmation p {
+  margin: 15px 0;
+  color: #333;
+}
+
+.client-details {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+  text-align: left;
+  border-left: 4px solid #ff4757;
+}
+
+.client-details strong {
+  color: #2c3e50;
+}
+
+.warning-text {
+  color: #ff4757;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Delete Confirm Button */
+.delete-confirm-button {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.delete-confirm-button:hover {
+  background: #ff3838;
+}
+
+.delete-confirm-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Success Message Styles */
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Table Actions Column */
+.table-row .table-cell:last-child {
+  text-align: center;
+  width: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .delete-button {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+  
+  .client-details {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .delete-confirmation {
+    padding: 15px 0;
+  }
+}
+
+/* Modal content adjustments for delete modal */
+.modal-content {
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Table row hover effect adjustment when delete button is present */
+.table-row:hover .delete-button {
+  background: #ff3838;
+}
+
+/* Prevent row click when clicking delete button */
+.table-cell .delete-button {
+  z-index: 10;
+  position: relative;
+}
